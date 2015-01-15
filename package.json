@@ -1,0 +1,50 @@
+{
+  "name": "olhovivo",
+  "version": "1.0.0",
+  "description": "A node.js wrapper for the SPTrans Olho Vivo API.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha --require blanket -R mocha-spec-cov-alt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yamadapc/node-olhovivo"
+  },
+  "keywords": [
+    "olhovivo",
+    "sptrans",
+    "maps",
+    "sao",
+    "paulo",
+    "brasil",
+    "api-wrapper",
+    "wrapper"
+  ],
+  "author": "Pedro Tacla Yamada",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yamadapc/node-olhovivo/issues"
+  },
+  "homepage": "https://github.com/yamadapc/node-olhovivo",
+  "devDependencies": {
+    "blanket": "^1.1.6",
+    "mocha": "^2.1.0",
+    "mocha-spec-cov-alt": "^0.2.3",
+    "should": "^4.6.0"
+  },
+  "config": {
+    "blanket": {
+      "data-cover-never": [
+        "node_modules",
+        "test"
+      ],
+      "pattern": [
+        "lib"
+      ],
+      "spec-cov": {
+        "threshold": 80,
+        "localThreshold": 80
+      }
+    }
+  }
+}
