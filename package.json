@@ -1,6 +1,6 @@
 {
   "name": "olhovivo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A node.js wrapper for the SPTrans Olho Vivo API.",
   "main": "lib/index.js",
   "scripts": {
@@ -47,5 +47,8 @@
         "lcovOutput": "lcov"
       }
     }
+  },
+  "dependencies": {
+    "bluebird": "^2.7.1"
   }
 }
