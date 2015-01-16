@@ -1,7 +1,7 @@
 node-olhovivo
 =============
 [![Build Status](https://travis-ci.org/yamadapc/node-olhovivo.svg)](https://travis-ci.org/yamadapc/node-olhovivo)
-[![Coverage Status](https://coveralls.io/repos/yamadapc/node-olhovivo/badge.png)](https://coveralls.io/r/yamadapc/node-olhovivo)
+[![Coverage Status](https://coveralls.io/repos/yamadapc/node-olhovivo/badge.svg?branch=master)](https://coveralls.io/r/yamadapc/node-olhovivo?branch=master)
 [![Dependency Status](https://david-dm.org/yamadapc/node-olhovivo.svg)](https://david-dm.org/yamadapc/node-olhovivo)
 [![devDependency Status](https://david-dm.org/yamadapc/node-olhovivo/dev-status.svg)](https://david-dm.org/yamadapc/node-olhovivo#info=devDependencies)
 [![npm downloads](http://img.shields.io/npm/dm/node-olhovivo.svg)](https://www.npmjs.org/package/olhovivo)
