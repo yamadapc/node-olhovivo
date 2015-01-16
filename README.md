@@ -4,10 +4,16 @@ node-olhovivo
 [![Coverage Status](https://coveralls.io/repos/yamadapc/node-olhovivo/badge.svg?branch=master)](https://coveralls.io/r/yamadapc/node-olhovivo?branch=master)
 [![Dependency Status](https://david-dm.org/yamadapc/node-olhovivo.svg)](https://david-dm.org/yamadapc/node-olhovivo)
 [![devDependency Status](https://david-dm.org/yamadapc/node-olhovivo/dev-status.svg)](https://david-dm.org/yamadapc/node-olhovivo#info=devDependencies)
-[![npm downloads](http://img.shields.io/npm/dm/node-olhovivo.svg)](https://www.npmjs.org/package/olhovivo)
-[![npm version](http://img.shields.io/npm/v/node-olhovivo.svg)](https://www.npmjs.org/package/olhovivo)
+[![npm downloads](http://img.shields.io/npm/dm/olhovivo.svg)](https://www.npmjs.org/package/olhovivo)
+[![npm version](http://img.shields.io/npm/v/olhovivo.svg)](https://www.npmjs.org/package/olhovivo)
 - - -
 A node.js wrapper for the SPTrans Olho Vivo API.
+
+## Installing
+You can install this library with:
+```bash
+npm install --save olhovivo
+```
 
 ## Usage
 ```javascript
