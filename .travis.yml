@@ -1,7 +1,10 @@
 language: node_js
 node_js:
-    - '0.11'
-    - '0.10'
+- '0.11'
+- '0.10'
 after_script:
-    - npm i coveralls
-    - ./node_modules/coveralls/bin/coveralls.js < lcov
+- npm i coveralls
+- "./node_modules/coveralls/bin/coveralls.js < lcov"
+env:
+  global:
+    secure: BwcFZoAHzJJrIPNT35wP0F1gEBtmNLDCaLwRnx7r67CIWAm8t3O4jKbTbhWqdetHEcKsP7msT+1R4wzP82wT/Q44FQ9H2W0TcZU3MTWF6C8xuuodvILpkYb4KS4zCbdoQtlkAy9qbXZSEd54z2EOhW98pjAIpSVWHcgPSkpFP5Q=
