@@ -3,6 +3,19 @@ node-olhovivo
 - - -
 A node.js wrapper for the SPTrans Olho Vivo API.
 
+## Usage
+```javascript
+var OlhoVivoApi = require('olhovivo');
+var olhovivoApi = new OlhoVivoApi({
+  token: process.env.SPTRANS_TOKEN,
+});
+
+olhovivoApi.queryLines('bandeira')
+  .then(function(lines) {
+    console.log(lines);
+  });
+```
+
 ## Progress
 Wrapped endpoints:
 - [x] `POST /Login/Autenticar?token={token}`
