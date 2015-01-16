@@ -1,5 +1,11 @@
 node-olhovivo
 =============
+[![Build Status](https://travis-ci.org/yamadapc/node-olhovivo.svg)](https://travis-ci.org/yamadapc/node-olhovivo)
+[![Coverage Status](https://coveralls.io/repos/yamadapc/node-olhovivo/badge.png)](https://coveralls.io/r/yamadapc/node-olhovivo)
+[![Dependency Status](https://david-dm.org/yamadapc/node-olhovivo.svg)](https://david-dm.org/yamadapc/node-olhovivo)
+[![devDependency Status](https://david-dm.org/yamadapc/node-olhovivo/dev-status.svg)](https://david-dm.org/yamadapc/node-olhovivo#info=devDependencies)
+[![npm downloads](http://img.shields.io/npm/dm/node-olhovivo.svg)](https://www.npmjs.org/package/olhovivo)
+[![npm version](http://img.shields.io/npm/v/node-olhovivo.svg)](https://www.npmjs.org/package/olhovivo)
 - - -
 A node.js wrapper for the SPTrans Olho Vivo API.
 
