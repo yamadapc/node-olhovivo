@@ -1,3 +1,7 @@
+// Generated with:
+//
+// var nock = require('nock');
+// before(function() { nock.recorder.rec(); });
 'use strict';
 var nock = require('nock');
 
