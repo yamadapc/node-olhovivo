@@ -2,6 +2,8 @@
 var should = require('should');
 var OlhoVivoApi = require('..');
 
+require('./api-stub');
+
 describe('OlhoVivoAPI(options)', function() {
   it('gets exposed', function() {
     should.exist(OlhoVivoApi);
@@ -11,7 +13,7 @@ describe('OlhoVivoAPI(options)', function() {
   describe('.prototype.authenticate([token])', function() {
     it('authenticates the client for subsequent requests', function() {
       return new OlhoVivoApi({
-        token: process.env.SPTRANS_TOKEN,
+        token: 'XXX',
         deferAuthentication: true,
       }).authenticate();
     });
@@ -19,7 +21,7 @@ describe('OlhoVivoAPI(options)', function() {
 
   before(function() {
     this.olhovivoApi = new OlhoVivoApi({
-      token: process.env.SPTRANS_TOKEN,
+      token: 'XXX',
     });
   });
 
@@ -90,9 +92,7 @@ describe('OlhoVivoAPI(options)', function() {
 
   describe('.prototype.arrivalTimes(query)', function() {
     it('gets all arrival times relative to a query', function() {
-      return this.olhovivoApi.arrivalTimes({
-          lineCode: 33674
-        })
+      return this.olhovivoApi.arrivalTimes({ lineCode: 33674 })
         .then(function(/*results*/) {
           // There's nothing to expect here without proper stubs...
         });
