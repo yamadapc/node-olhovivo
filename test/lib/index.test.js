@@ -1,8 +1,8 @@
 'use strict'; /* global describe, it, before */
 var should = require('should');
-var OlhoVivoApi = require('..');
+var OlhoVivoApi = require('../..');
 
-require('./api-stub');
+require('../api-stub');
 
 describe('OlhoVivoAPI(options)', function() {
   it('gets exposed', function() {

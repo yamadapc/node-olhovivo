@@ -4,7 +4,7 @@
   "description": "A node.js wrapper for the SPTrans Olho Vivo API.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha --require blanket -R mocha-spec-cov-alt"
+    "test": "mocha --require blanket -R mocha-spec-cov-alt test/**/*.test.js"
   },
   "repository": {
     "type": "git",
