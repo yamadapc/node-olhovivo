@@ -1,6 +1,6 @@
 {
   "name": "olhovivo",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A node.js wrapper for the SPTrans Olho Vivo API.",
   "main": "lib/index.js",
   "scripts": {
