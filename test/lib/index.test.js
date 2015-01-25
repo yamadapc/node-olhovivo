@@ -4,10 +4,27 @@ var OlhoVivoApi = require('../..');
 
 require('../api-stub');
 
-describe('OlhoVivoAPI(options)', function() {
-  it('gets exposed', function() {
-    should.exist(OlhoVivoApi);
-    OlhoVivoApi.should.be.instanceof(Function);
+describe('OlhoVivoApi(options)', function() {
+  describe('the constructor', function() {
+    function testNewOlhoVivoApi(options) {
+      new OlhoVivoApi(options);
+    }
+
+    it('throws if no `options` or `options.token` is provided', function() {
+      testNewOlhoVivoApi.bind(null, {}).should.throw();
+      testNewOlhoVivoApi.bind(null, undefined).should.throw();
+    });
+
+    it('doesn\'t require `options.token` if `deferAuthentication` is `true`', function() {
+      testNewOlhoVivoApi.bind(null, {
+        deferAuthentication: true,
+      }).should.not.throw();
+    });
+
+    it('gets exposed', function() {
+      should.exist(OlhoVivoApi);
+      OlhoVivoApi.should.be.instanceof(Function);
+    });
   });
 
   describe('.prototype.authenticate([token])', function() {

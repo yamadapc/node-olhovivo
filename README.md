@@ -45,19 +45,21 @@ Wrapped endpoints:
 ## Documentation
 ### `OlhoVivoApi`
 
-OlhoVivoApi is a class wrapping the Olho Vivo real-time API.
+OlhoVivoApi is a class wrapping the Olho Vivo real-time API. The `token`
+option is not required if the `deferAuthentication` option is set to true.
+
 
 #### Params:
 
-* **Object** *options* 
-* **String** *options.token* Required API token (see http://bit.ly/1zjTGHj)
-* **String** *[options.baseUrl='http://api.olhovivo.sptrans.com.br/v']* 
+* **Object** *options*
+* **String** *[options.token]* OlhoVivo API token (see http://bit.ly/1zjTGHj)
+* **String** *[options.baseUrl='http://api.olhovivo.sptrans.com.br/v']*
 * **Boolean** *[options.deferAuthentication=false]* By default, the constructor
   will immediatelly try to authenticate with the API and store the result of
   this operation in a promise to the authenticated cookie jar. If this option is
   set to true, the wrapper will only authenticate itself when
   `OlhoVivoApi.prototype.authenticate([token])` is called manually.
-* **Mixed** *[options.version='0']* 
+* **Mixed** *[options.version='0']*
 
 ### `OlhoVivoApi.prototype.queryLines(query)`
 
@@ -123,7 +125,7 @@ Wraps the request: `GET /Corredor`
 
 #### Return:
 
-* **Promise.<Array>** 
+* **Promise.<Array>**
 
 ### `OlhoVivoApi.prototype.linePositions(lineCode)`
 
@@ -133,7 +135,7 @@ Wraps the request: `GET /Posicao?codigoLinha={codigoLinha}`
 
 #### Params:
 
-* **Mixed** *lineCode* 
+* **Mixed** *lineCode*
 
 #### Return:
 
@@ -156,8 +158,8 @@ Wraps the requests:
 #### Params:
 
 * **Object** *query* If a string is provided, the stops
-* **Object** *[query.lineCode]* 
-* **Object** *[query.stopCode]* 
+* **Object** *[query.lineCode]*
+* **Object** *[query.stopCode]*
 
 #### Return:
 
