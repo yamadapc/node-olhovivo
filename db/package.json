@@ -3,7 +3,8 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "test": "mocha *.test.js"
+    "test": "mocha --require blanket -R mocha-spec-cov-alt *.test.js",
+    "coverage": "mocha --require blanket -R html-cov *.test.js > coverage.html"
   },
   "dependencies": {
     "bluebird": "^2.8.0",
@@ -12,7 +13,24 @@
     "olhovivo": "0.0.4"
   },
   "devDependencies": {
+    "blanket": "^1.1.6",
     "mocha": "^2.1.0",
+    "mocha-spec-cov-alt": "^0.2.3",
     "should": "^4.6.1"
+  },
+  "config": {
+    "blanket": {
+      "data-cover-never": [
+        "node_modules"
+      ],
+      "pattern": [
+        ".js"
+      ],
+      "spec-cov": {
+        "threshold": 80,
+        "localThreshold": 80,
+        "lcovOutput": "lcov"
+      }
+    }
   }
 }

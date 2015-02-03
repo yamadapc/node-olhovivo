@@ -93,16 +93,21 @@ exports.insertLines = function insertLines(db, lines) {
     // Only 1000 documents per `insert`
     var chunks = exports.chunksOf(1000, toInsertLines);
     return Promise.map(chunks, function(chunk) {
+      log('info', 'Inserting ' + chunk.length + ' lines into the database');
       return linesColl.insertManyAsync(chunk, { w: 1 });
     });
   });
 };
 
 exports.insertLinesWorker = function insertLinesWorker(db, olhovivoApi) {
-  return foreverInterval(function() {
+  function start() {
     return exports.discoverLines(olhovivoApi)
       .then(exports.insertLines.bind(null, db));
-  }, 3000);
+  }
+
+  var interval = foreverInterval(start, 1000);
+  process.nextTick(start);
+  return interval;
 };
 
 exports.getLines = function getLines(db) {
