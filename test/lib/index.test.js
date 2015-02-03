@@ -1,10 +1,17 @@
-'use strict'; /* global describe, it, before */
+'use strict'; /* global describe, it, before, after */
+var nock = require('nock');
 var should = require('should');
 var OlhoVivoApi = require('../..');
 
-require('../api-stub');
-
 describe('OlhoVivoApi(options)', function() {
+  before(function() {
+    require('../api-stub');
+  });
+
+  after(function() {
+    nock.enableNetConnect();
+  });
+
   describe('the constructor', function() {
     function testNewOlhoVivoApi(options) {
       new OlhoVivoApi(options);
