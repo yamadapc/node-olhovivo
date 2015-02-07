@@ -47,5 +47,5 @@ routeStopsStream.on('end', function() {
   fs.writeFileSync(
     path.join(__dirname, 'output.json'),
     JSON.stringify(_.values(knownStops))
-  )
+  );
 });
