@@ -53,7 +53,7 @@
     }
   },
   "dependencies": {
-    "bluebird": "^2.7.1",
+    "bluebird": "^2.9.6",
     "csv": "^0.4.1",
     "lodash": "^2.4.1",
     "superagent": "^0.21.0"
