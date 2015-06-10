@@ -37,7 +37,7 @@ describe('OlhoVivoApi(options)', function() {
   describe('.prototype.authenticate([token])', function() {
     it('authenticates the client for subsequent requests', function() {
       return new OlhoVivoApi({
-        token: 'XXX',
+        token: 'XXX', // process.env.SPTRANS_TOKEN,
         deferAuthentication: true,
       }).authenticate();
     });
@@ -45,7 +45,7 @@ describe('OlhoVivoApi(options)', function() {
 
   before(function() {
     this.olhovivoApi = new OlhoVivoApi({
-      token: 'XXX',
+        token: 'XXX', // process.env.SPTRANS_TOKEN,
     });
   });
 
@@ -87,6 +87,19 @@ describe('OlhoVivoApi(options)', function() {
             Endereco: 'R DOUTORA MARIA AUGUSTA SARAIVA/ R NATIVIDADE',
             Latitude: -23.595087,
             Longitude: -46.673152,
+          });
+        });
+    });
+
+    it('queries the SPTrans API for stops by line code', function() {
+      return this.olhovivoApi.queryStops({ lineCode: 1272 })
+        .then(function(results) {
+          results.should.containEql({
+            CodigoParada: 480012877,
+            Endereco: 'AC PONTE DO PIQUERI AV EMB MACEDO SOARES/ R PROFESSORA SURAIA AIDAR MENON',
+            Latitude: -23.511052,
+            Longitude: -46.705493,
+            Nome: 'MARGINAL B/C'
           });
         });
     });
