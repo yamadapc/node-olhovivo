@@ -3,3 +3,5 @@ node_modules
 lcov
 coverage.html
 .tern-port
+web/node_modules
+web/output.log
