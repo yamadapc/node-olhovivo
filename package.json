@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/yamadapc/node-olhovivo",
   "devDependencies": {
-    "blanket": "^1.1.6",
+    "blanket": "^1.2.2",
     "jsfmt": "^0.4.1",
     "mocha": "^2.1.0",
     "mocha-make-stub": "^2.1.0",
