@@ -37,7 +37,7 @@
     "mocha-spec-cov-alt": "^0.3",
     "nock": "^2.4.0",
     "progress": "^1.1.8",
-    "should": "^4.6.0"
+    "should": "^8.3.0"
   },
   "config": {
     "blanket": {
