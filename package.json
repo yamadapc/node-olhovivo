@@ -56,7 +56,6 @@
     }
   },
   "dependencies": {
-    "blanket": "^1.1.4",
     "bluebird": "^3.3.4",
     "csv": "^0.4.1",
     "lodash": "^4.6.1",
