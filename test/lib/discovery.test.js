@@ -8,7 +8,7 @@ var discovery = require('../../lib/discovery');
 describe('discovery', function() {
   before(function() {
     this.olhovivoApi = new OlhoVivoApi({
-      token: process.env.SPTRANS_TOKEN,
+      token: 'XXX' // process.env.SPTRANS_TOKEN,
     });
   });
 
