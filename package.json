@@ -35,7 +35,7 @@
     "mocha": "^2.4.5",
     "mocha-make-stub": "^2.1.0",
     "mocha-spec-cov-alt": "^1.1.1",
-    "nock": "^7.5.0",
+    "nock": "^7.7.1",
     "progress": "^1.1.8",
     "should": "^8.3.0"
   },
